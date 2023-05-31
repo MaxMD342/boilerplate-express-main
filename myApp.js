@@ -11,7 +11,7 @@ app.use(function(req, res, next) {
   next();
 })
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.use("/public", express.static( __dirname + "/public"));
@@ -44,7 +44,7 @@ app.get("/:word/echo", function(req, res) {
   });
 
 app.get("/name", function(req, res) {
-  var FirstName = bosyParser.first;
+  var FirstName = bodyParser.first;
   var LastName = bodyParser.last;
   var jsonObj = {name: FirstName + ' ' + LastName};
   res.send(jsonObj);
