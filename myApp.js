@@ -27,12 +27,12 @@ app.get("/json", function(req, res, next) {
     }
   });
   
-app.get('/now', function(req, res, next)) {
+app.get('/now', function(req, res, next) {
   req.time = new Date().toString();
   next();
 } function(req, res) {
   res.json({"ime": req.time});
-}
+})
 
 
 
