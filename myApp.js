@@ -1,5 +1,5 @@
 require('dotenv').config();
-const mySecret = process.env['MESSAGE_STYLE'];
+MESSAGE_STYLE = uppercase;
 let express = require('express');
 let app = express();
 console.log("Hello World!");
