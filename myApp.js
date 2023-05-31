@@ -1,4 +1,5 @@
 require('dotenv').config();
+const MESSAGE_STYLE = process.env['MESSAGE_STYLE']
 let express = require('express');
 let app = express();
 console.log("Hello World!");
