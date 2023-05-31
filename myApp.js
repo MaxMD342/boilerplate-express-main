@@ -44,8 +44,8 @@ app.get("/:word/echo", function(req, res) {
   });
 
 app.get("/name", function(req, res) {
-  var FirstName = req.query.first;
-  var LastName = req.query.last;
+  var FirstName = bosyParser.first;
+  var LastName = bodyParser.last;
   var jsonObj = {name: FirstName + ' ' + LastName};
   res.send(jsonObj);
 })
