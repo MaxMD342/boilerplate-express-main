@@ -10,7 +10,7 @@ app.get("/", function(req, res) {
   res.sendFile(absolutePath);
 });
 
-app.get("/json", function(req, res) {
+app.get("/json", function(req, res, next) {
     if (process.env.MESSAGE_STYLE === "uppercase"){
         let response = "Hello json".toUpperCase();
         res.json({"message": response});
@@ -21,7 +21,10 @@ app.get("/json", function(req, res) {
     }
   });
   
-
+app.use(function(req, res, next) {
+  console.log(req.method + " " + req.path + " " + req.ip);
+  next();
+})
 
 
 
