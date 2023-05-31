@@ -12,7 +12,7 @@ app.get("/", function(req, res) {
 });
 
 app.get("/json", function(req, res) {
-    process.env.MESSAGE_STYLE
+    process.env.MESSAGE_STYLE;
     res.json({"message": "Hello json"});
   });
   
